@@ -36,12 +36,14 @@ Valet+ for Linux depends on specific PHP versions and extensions from the "ppa:o
    sudo mv "$FILE" "${FILE/questing/noble}"
    FILE="${FILE/questing/noble}"
    ```
+   or, manually change the version in the filename created in "/etc/apt/sources.list.d"
 
 5. **Replace the release name inside the file**:
    ```bash
    sudo sed -i 's/questing/noble/g' "$FILE"
    sudo sed -i 's/plucky/noble/g' "$FILE"
    ```
+   or, manually change the version inside the file created in "/etc/apt/sources.list.d".
 
 6. **Update your package list**:
    ```bash
