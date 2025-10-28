@@ -13,10 +13,7 @@ Valet+ for Linux depends on specific PHP versions and extensions from the "ppa:o
    
 2. **Install dependencies**:
    ```bash
-   sudo apt-get install libicu74
-   ```
-   ```bash
-   sudo apt-get install libzip4t64
+   sudo apt-get install libicu74 libzip4t64
    ```
 
 2. **Add the PPA normally**:
