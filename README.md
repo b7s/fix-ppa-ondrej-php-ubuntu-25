@@ -31,10 +31,13 @@ Valet+ for Linux depends on specific PHP versions and extensions from the "ppa:o
 
 4. **Rename the file to reflect "noble"**:
    ```bash
-   sudo mv "$FILE" "${FILE/questing/noble}"
+   # If you are using version 25.04
    sudo mv "$FILE" "${FILE/plucky/noble}"
-   FILE="${FILE/questing/noble}"
    FILE="${FILE/plucky/noble}"
+
+   # If you are using version 25.10
+   sudo mv "$FILE" "${FILE/questing/noble}"
+   FILE="${FILE/questing/noble}"
    ```
 
 5. **Replace the release name inside the file**:
@@ -57,3 +60,8 @@ valet use 8.5
 valet use 8.4
 valet use 7.4
 ```
+
+
+> ℹ️ But remember:
+>
+> Valet Plus requires a version of PHP installed on your system, so, install PHP normally with `sudo apt install php8.4` and the basic extensions with: `sudo apt install php8.4-cli php8.4-common php8.4-mbstring php8.4-xml php8.4-curl php8.4-mysql php8.4-zip php8.4-bcmath php8.4-gd php8.4-intl php8.4-soap php8.4-sqlite3`, and **[composer](https://getcomposer.org/download/)**.
