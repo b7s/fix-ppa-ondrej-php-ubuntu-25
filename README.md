@@ -63,9 +63,10 @@ valet use 7.4
 
 > ℹ️ But remember:
 
-Valet Plus requires a version of PHP installed on your system, so, install PHP normally with (chose your version):
+Valet Plus requires a previous version of PHP installed on your system, so, install PHP normally with (choose your version):
 
 ```bash
+# if you want 8.4:
 sudo apt install php8.4
 ```
 
