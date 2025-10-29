@@ -17,16 +17,18 @@ Valet+ for Linux depends on specific PHP versions and extensions from the "ppa:o
    ```
 
 2. **Add the PPA normally**:
+   - It's going to cause an error, but that's okay, we'll fix it.
+
    ```bash
    sudo add-apt-repository ppa:ondrej/php
    ```
 
-3. **Find the `.list` file that was created**:
+4. **Find the `.list` file that was created**:
    ```bash
    FILE=$(find /etc/apt/sources.list.d -name '*ondrej-php*.list')
    ```
 
-4. **Rename the file to reflect "noble"**:
+5. **Rename the file to reflect "noble"**:
    ```bash
    # If you are using version 25.04
    sudo mv "$FILE" "${FILE/plucky/noble}"
@@ -38,14 +40,14 @@ Valet+ for Linux depends on specific PHP versions and extensions from the "ppa:o
    ```
    or, manually change the version in the filename created in "/etc/apt/sources.list.d"
 
-5. **Replace the release name inside the file**:
+6. **Replace the release name inside the file**:
    ```bash
    sudo sed -i 's/questing/noble/g' "$FILE"
    sudo sed -i 's/plucky/noble/g' "$FILE"
    ```
    or, manually change the version inside the file created in "/etc/apt/sources.list.d".
 
-6. **Update your package list**:
+7. **Update your package list**:
    ```bash
    sudo apt update
    ```
